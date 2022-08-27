@@ -1,0 +1,651 @@
+/* Start general rules */
+* {
+    box-sizing: border-box;
+    margin:0;
+}
+
+html {
+    scroll-behavior:smooth;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+/* End general rules */
+
+/* Start component */
+.container {
+    width:90%;
+    margin:0 auto;
+    padding:0 15px;
+}
+
+.main_heading {
+text-align: center;
+color:#626567 ;
+margin-bottom:40px;
+}
+
+.main_heading h2 {
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing:5px;
+}
+
+.main_heading p {
+    font-weight: normal;
+    margin-top: -6px;
+    color:#B3B6B7;
+ 
+}
+
+/* End component */
+
+
+
+/* Start Variables */
+:root {
+   --section-padding:100px;
+   --low-padding:40px;
+}
+
+/* End variables */
+
+
+
+
+
+/* Start heading */
+.header {
+display: flex;
+justify-content: space-between;
+position: relative;
+/* border-bottom:2px solid rgba(119, 119, 119, 0.463); */
+/*fixed navbar*/
+position: fixed;
+width:100%;
+overflow: hidden;
+top:0;
+background-color:black;
+z-index:1;/*  يكون فوق الديفات كلهم nav bar    عشان ال   */
+ 
+}
+
+.header .logo img{
+width:50px;
+height:50px;
+color: red;
+margin-top:4px;
+margin-left:10px;
+ 
+}
+
+.header .content {
+position: absolute;
+display: flex;
+right:50px;
+top:50%;
+transform: translateY(-50%);
+margin-top:0;
+}
+
+.header .content a {
+ display: block;
+ padding:10px 15px;
+ margin-right:20px;
+ text-decoration:none;
+ color:white ;
+ text-transform: uppercase;
+
+ 
+}
+
+.header .content a i {
+    margin-right:6px;
+}
+
+
+.header .content a:hover {
+    color:black;
+    background-color:#fef9e7a1;
+} 
+
+
+.header .search_icon {
+    position: absolute;
+    color:#E74C3C ;
+    right:0;
+    top:50%;
+    transform: translateY(-50%);
+    padding:15px;
+    
+    
+}
+
+.header .search_icon:hover {
+    background-color: #E74C3C ;
+    color:white;
+}
+
+
+/* End Heading */
+
+/* Start Landing */
+.landing {
+    position: relative;
+    min-height:100vh;
+    background-image:url("../images/background.png");
+    background-size: cover;
+    background-position: center center;
+    background-attachment:fixed; /* scroll الصورة رح تتحرك مع ال */
+}
+
+.landing::before {
+    position: absolute;
+    content:"";
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.714);
+}
+
+.landing .text {
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    color: white;
+    padding:50px;
+
+    /*after edit*/
+    margin-left:250px;
+}
+ 
+.landing .text h2 {
+    font-size:80px;
+    /* letter-spacing:20px; */
+
+    /* after edit */
+    letter-spacing:100px;
+}
+
+.landing .text p {
+/* margin-left:50px; */
+/* letter-spacing:6px; */
+font-size:20px;
+/* color:darksalmon; */
+
+
+/* after edit */
+margin-left:200px;
+margin-top:30px;
+letter-spacing:10px;
+color: white;
+}
+
+
+/* after edit */
+
+@media (max-width:991px)
+{
+    .landing .text {
+        margin-left:150px;
+    }
+}
+
+
+/*  background-position: center center       بانه حطينا  media Query  حلينا مشكله ال */
+
+/* @media (max-width:991px) {
+     .landing {
+        background-image: url("../images/background-smallscreen.png");
+          }
+}
+@media (min-width:992px) {
+    .landing {
+       background-image: url("../images/background.png");
+         }
+} */
+ 
+
+
+
+
+/* End Landing */
+
+
+
+/* start about */
+ .about {
+    padding-top:var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color:#F2F3F4;
+ }
+
+.about h3 {
+margin-bottom:20px;
+font-size:40px;
+font-weight:bold;
+max-width:80%;
+}
+
+.about .content {
+    display: flex;
+}
+
+ .about .content img {
+    width:40%;
+ }
+
+ .about .content .text {
+    width:45%;
+    margin-left:60px;
+    line-height:1.8;
+    color: #626567;
+    margin-top:25px;
+ }
+
+.about .about_content {
+margin-left:80px;
+}
+/* End about */
+
+
+
+/* Start models */
+.models {
+    padding-top:var(--section-padding);
+    padding-bottom:var(--section-padding);
+}
+
+.models .models-folder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+.models .models-folder .model_car {
+    position: relative;
+    width:30%;
+    transition:0.5s;
+  
+  
+
+}
+
+.models .models-folder .model_car:hover{
+    margin-top:-50px;
+}
+
+.models .models-folder .model_car img {
+ position: absolute;
+ width:100%;
+ height:215px;
+ 
+ 
+}
+
+.models .models-folder .model_car .text {
+    margin-top:230px;
+    padding:10px;
+}
+
+.models .models-folder .model_car .text h3 {
+    font-weight: normal;
+    margin-bottom:10px;
+    text-transform: uppercase;
+}
+
+.models .models-folder .model_car .text p {
+    font-size:16px;
+    color:#797D7F;
+}
+ 
+/* End models */
+
+
+/* Start video */
+.video {
+    position: relative; 
+     
+}
+
+.video video
+{
+    width:100%;
+ 
+}
+
+.video::before {
+    position: absolute;
+    content:"";
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(0, 0, 0, 0.526);
+}
+
+.video .text {
+    position: absolute;
+    top:50%;
+    transform:translateY(-50%);
+    padding:60px;
+    max-width:40%;
+    font-size:20px;
+}
+
+.video .text h3 {
+color:white;
+font-size:20px;
+text-transform: uppercase;
+}
+
+.video .text p{
+    margin-top:20px;
+    color: rgba(255, 255, 255, 0.626);
+    font-weight:normal;
+    font-family:-webkit-body;
+    line-height:2;
+}
+
+
+
+
+/* End video */
+
+
+
+/* Start safety */
+.safety {
+    padding-top:var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.safety .content {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.safety .content .text {
+    padding:30px;
+}
+
+.safety .content .text h3 {
+    font-size:25px;
+    margin-bottom:10px;
+  
+}
+
+.safety .content .text p {
+    color:#797D7F;
+    max-width:300px;
+    margin-bottom:10px;
+
+}
+
+.safety .content .text ul {
+    background-color: #E0E5E8;
+    padding-top:30px;
+    padding-bottom:30px;
+    padding-left:60px;
+    border-radius:8%;
+    margin-top:30px;
+ 
+}
+
+.safety .content .text ul h4 {
+    margin-bottom:20px;
+    font-size:18px;
+}
+
+.safety .content .text ul li {
+    margin-bottom:15px;
+}
+
+.safety .content .text ul li span.sp-1 {
+    margin-left:50px;
+}
+ 
+.safety .content .text ul li span.sp-2 {
+    margin-left:55px;
+}
+
+.safety .content .text ul li span.sp-3 {
+    margin-left:23px;
+}
+
+.safety .content .text ul li span.sp-4 {
+    margin-left:42px;
+}
+
+
+/* @media (max-width:991px)
+{
+    .safety .content .text ul li span {
+        display:none;
+    }
+} */
+
+
+.safety .content .image {
+    background-color:#ECEDEE;
+    border-radius: 50%;
+ 
+}
+
+.safety .content .image img {
+    margin-left:-70px;
+ 
+}
+
+@media (max-width:1029px)
+{
+    .safety .content .text ul  {
+        display:none;
+    }
+
+    .safety .content .image {
+        margin-left:60px;
+        height:400px;
+    }
+}
+
+
+ /* End safety */
+
+
+
+ /* start buying */
+
+.buying {
+padding-top:0; 
+} 
+
+ .buying .box-folder {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(30%,1fr));
+     
+    
+ }
+ 
+ .buying .box-folder .box {
+    background-color:#CB4335;
+    padding:25px;   
+ }
+
+ 
+ .buying .box-folder .box:first-child {
+    background-color:#B03A2E ;
+ }
+ 
+ .buying .box-folder .box:last-child {
+    background-color:#E74C3C;
+ }
+
+
+
+ .buying .box-folder .box .text {
+    padding-left:60px;
+ 
+ }
+
+ .buying .box-folder .box .text h3 {
+    text-transform: uppercase;
+    color: white;
+    font-size:15px;
+    font-weight:600;
+ }
+
+ .buying .box-folder .box .text p { 
+    color: white;
+    margin:25px 0;
+    max-width:260px;
+    
+ }
+
+ .buying .box-folder .box i {
+    position:relative;
+    top:15%;
+    left:20px;
+    font-size:20px;
+    color: white;
+ } 
+
+ 
+ .buying .box-folder .box a {
+    position: relative;
+    background-color:black ;
+    color:white;
+    text-transform: capitalize;
+    margin-left:60px;
+    padding:10px;
+    text-decoration: none; 
+    transition:ease-in-out 0.9s;
+    box-shadow:inset 0 0 0 0 white;
+ }
+ 
+.buying .box-folder .box a:hover {
+/* background-color: black;
+color: white;
+  */
+
+box-shadow:inset 0 100px 0 0 white;
+color:black;
+ 
+}
+
+ /* End buying */
+
+ /* Start Question */
+.ques {
+    position: relative;
+    min-height:100vh;
+    background-image:url(../images/footer.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.ques::before {
+    position: absolute;
+    content: "";
+    top:0;
+    left: 0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0,80%);
+}
+
+.ques .box-folder {
+    position: absolute;
+    color: white;
+    display: flex;
+    justify-content:space-around;
+    top:50%;
+    transform: translateY(-50%);
+   
+    
+}
+
+.ques .box-folder .box {
+ position: relative;
+ width:47%;
+ background-color:rgba(255, 255, 255, 0.168);
+ padding:40px 20px;
+}
+ 
+.ques .box-folder .box .text h3 {
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-bottom:40px;
+}
+
+.ques .box-folder .box .text h3::after {
+    position:absolute;
+    content:"";
+    width:35px;
+    height:3px;
+    background-color:red;
+    top:70px;
+    left:20px;
+}
+
+.ques .box-folder .box .text p {
+  font-size:20px;
+}
+ 
+.ques .box-folder .box a {
+    position: relative;
+    float: right;
+    text-decoration:none;
+    text-transform: capitalize;
+    padding:15px 20px;
+    background-color:red;
+    color:white;
+    box-shadow:inset 0 0 0 0 grey;
+    transition:ease-in-out 0.5s;
+}
+
+.ques .box-folder .box a:hover{
+
+    box-shadow:inset 100px 100px 0 0 grey;
+
+}
+
+ /* End Quetion */
+
+ /* start Footer */
+.footer {
+    background-color: black;
+    color:#D5CDCD ;
+     padding-top:calc(var(--low-padding) - 20px);
+     padding-bottom:calc(var(--low-padding) - 20px);
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .content a {
+    margin-right:10px;
+    text-decoration: none;
+    color:#D5CDCD ;
+    
+}
+
+.footer p span,
+.footer .content a {
+    transition:0.6s;
+}
+
+
+.footer p span:hover ,
+.footer .content a:hover {
+color:red;
+}
+
+ /* End Footer */
